@@ -1,6 +1,5 @@
 # get-ieee-paper
-This script downloads an IEEE Xplore paper by piping a `wget` download through a remote host, which has subscription access. This is done by generating the url
-`http://ieeexplore.ieee.org/stampPDF/getPDF.jsp?arnumber=XXXXXXX`, where `XXXXXXX` is the article number
+This script obtains an IEEE Xplore paper by piping a `wget` download through a remote host that has subscription access. The script calls the url `http://ieeexplore.ieee.org/stampPDF/getPDF.jsp?arnumber=XXXXXXX` from the remote host, where `XXXXXXX` is the article number, and pipes the .pdf download to the local host.
 
 ## Setup
 * `localhost`: machine where the script is run
