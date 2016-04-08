@@ -19,4 +19,4 @@ localhost$ python get-ieee-paper.py 7402836
 Executing command
 > ssh username@remotehost 'wget -q -O - "http://ieeexplore.ieee.org/stampPDF/getPDF.jsp?arnumber=7402836"' > 7402836.pdf
 ```
-At this point, the file 7402836.pdf will be on `localhost`.
+At this point, the file 7402836.pdf is in the current directory on `localhost`.
