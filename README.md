@@ -20,3 +20,17 @@ Executing command
 > ssh username@remotehost 'wget -q -O - "http://ieeexplore.ieee.org/stampPDF/getPDF.jsp?arnumber=7402836"' > 7402836.pdf
 ```
 At this point, the file 7402836.pdf is in the current directory on `localhost`.
+
+## Academic Website
+A basic Flask website is provided in the `academic_site` directory. It contains
+simple pages for a home page, an about page and a publications list.
+
+### Running the site
+Install Flask and run the application:
+
+```bash
+pip install flask
+python academic_site/app.py
+```
+
+Visit `http://localhost:5000` in your web browser to see the site.

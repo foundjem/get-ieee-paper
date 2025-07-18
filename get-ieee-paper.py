@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 import re
-import urlparse
+from urllib import parse as urlparse
 import os
 
 def get_arnumber(strurl):
@@ -23,13 +23,13 @@ def get_arnumber(strurl):
 def main():
     # print help
     if len(sys.argv) <= 1:
-        print "usage: %s <ieeeurl|arnumber>" % sys.argv[0]
+        print("usage: %s <ieeeurl|arnumber>" % sys.argv[0])
         sys.exit()
 
     # determine article number
     arnumber = get_arnumber(sys.argv[1])
     if not arnumber:
-        print "could not determine arnumber"
+        print("could not determine arnumber")
         sys.exit(1)
 
     # form wget url
@@ -39,8 +39,8 @@ def main():
     # download over ssh proxy
     # TODO: replace credentials here, and set up SSH keys
     cmd = "ssh username@remotehost 'wget -q -O - \"%s\"' > %s.pdf" % (url, arnumber)
-    print "Executing command"
-    print ">", cmd
+    print("Executing command")
+    print(">", cmd)
     os.system(cmd)
 
 if __name__ == '__main__':
